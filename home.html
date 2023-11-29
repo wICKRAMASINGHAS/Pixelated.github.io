@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Form</title>
+    <!-- Add Bootstrap CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- Add Bootstrap JavaScript (optional, for some components) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+
+    <style>
+
+body {
+    background-color: rgb(0, 0, 0); /* Change the background color to dark gray */
+    /* Add any other styles you want for the body here */
+}
+        /* CSS for the navigation bar */
+        ul.navbar0 {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            height: 100px;
+            background-color: #000000;
+            overflow: hidden;
+        }
+
+        li.nav-item0.logo {
+          position: absolute;
+          margin-top: -40px;
+    padding: 0; /* Remove padding for the logo list item */
+    margin-left: 0px; /* Adjust margin to separate the logo from other links */
+}
+/*navigation still*/
+/* Make the navbar fixed at the top */
+ul.navbar0 {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure the navbar is above other content */
+}
+
+
+
+li.nav-item0.logo img {
+  position: absolute;
+  padding: 0;
+    width: 120px; /* Adjust the width of the logo image as needed */
+    height: auto; /* Maintain the aspect ratio of the logo */
+}
+        li.nav-item0 {
+        
+            float: right;
+        }
+
+        li.nav-item0 a {
+            display: block;
+            font-family: "Orbitron", sans-serif; /* Specify Orbitron as the font family with a fallback to sans-serif */
+            font-weight: bolder;
+            font-size: 25px;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            margin-top: 20px;
+            margin-left: 50px;
+            text-decoration: none;
+        }
+        
+        li.nav-item0 a:hover{
+            color: rgb(255, 0, 0);
+            
+        }
+        /*login button*/
+        li.nav-item0 a1 {
+            display: block;
+            font-family: "Orbitron", sans-serif; /* Specify Orbitron as the font family with a fallback to sans-serif */
+            font-weight: bolder;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+       
+
+        /* Style for the Login button */
+        li.nav-item0 #login-button0 {
+    background-color: transparent; /* Set the background color to transparent */
+    border: 1px solid rgb(255, 0, 0); /* Add a solid border with the desired color */
+    width: 120px;
+   
+    text-align: center;
+    border-radius: 5px; /* Add rounded corners */
+    padding: 10px 20px; /* Adjust padding for the button */
+    margin-top: 30px; /* Add some margin to separate it from other links */
+    margin-right: 15px;
+    margin-left: 45px;
+    cursor: pointer;
+}
+
+
+        li.nav-item0 #login-button0:hover {
+          background-color: rgb(255, 0, 0); /* Change the background color on hover */
+        }
+
+
+      
+        /*---------------------------*/
+        .box-form0 {
+  margin:  auto;
+
+  background: #f8f6f6;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  
+  align-items: stretch;
+
+}
+@media (max-width: 980px) {
+  .box-form0 {
+    flex-flow: wrap;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+  }
+}
+.box-form0 div {
+  height: auto;
+}
+
+.box-form0 .left0 .overlay0 {
+  padding: 30px;
+  width: 100%;
+  height: 100%;
+  background: #131313;
+  
+ 
+}
+/* Add this CSS for the hover effect on the login button */
+/* Add this CSS for the overlay effect on the carousel text */
+
+
+
+
+.sentense1, .sentense2 {
+    position: absolute; /* Set the position to absolute for overlay */
+    margin-top: 400px; /* Adjust the vertical position as needed */
+    left: 50%;
+    margin-left: -350px;
+    margin-right: 500px; /* Adjust the horizontal position as needed */
+    transform: translate(-50%, -50%); /* Center the text horizontally and vertically */
+    text-align: left; /* Center-align the text within the overlay */
+    /*background: rgba(0, 0, 0, 0.5);*/ /* Add a semi-transparent background to the text */
+    padding: 20px; /* Add padding to the text for better readability */
+    color: white; /* Set the text color to white */
+    font-family: 'Russo One', sans-serif; /* Use RussoOne font */
+    font-size: 50px; /* Adjust the font size as needed */
+    line-height: 1.5;
+}
+
+
+/*second row*/
+  /* Apply styles to the boxes */
+  /* Apply styles to the container of the boxes */
+.container2 {
+  height: 100vh;
+    display: flex; /* Use flex display for the container */
+    flex-wrap: wrap; /* Allow the boxes to wrap to the next line if they don't fit */
+    justify-content: center; /* Center the boxes horizontally */
+    align-items: center; /* Center the boxes vertically */
+}
+
+/* Apply styles to each box */
+.box {
+    width: 300px;
+    height: 400px;
+    margin: 15px;
+    background-color: #000000;
+    
+    border-radius: 20px;
+    transition: transform 0.3s, opacity 0.3s, box-shadow 0.3s;
+    
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+  .box {
+          width: 300px;
+          height: 400px;
+          margin: 15px;
+          background-color: #1f1f1f; /* Use the first shade of red */
+          border-radius: 20px;
+          transition: transform 0.3s, opacity 0.3s, box-shadow 0.3s; /* Add box-shadow transition */
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add box shadow */
+          display: flex;
+          flex-direction: column;
+          box-shadow: 0px 5px 10px rgba(128, 128, 128, 0.2);
+          justify-content: space-between;
+          padding: 20px;
+      }
+
+      /* Apply styles to the right box */
+      .box:nth-child(2) {
+        background: linear-gradient(to right, #474747, #001aff);
+          background-color: #202020; /* Use the second shade of red */
+      }
+      .box:nth-child(3) {
+        background: linear-gradient(to right, #474747, #ff5e00,#ff0062);
+          background-color: rgb(83, 83, 83); /* Use the second shade of red */
+      }
+      .box:nth-child(4) {
+        background: linear-gradient(to right, #474747, #0099ff);
+          background-color: #757575; /* Use the second shade of red */
+      }
+      .box:nth-child(5) {
+        background: linear-gradient(to right, #474747, #8d8d8d);
+          background-color: #c5c5c5; /* Use the second shade of red */
+      }
+      /* Center text within the boxes */
+      .box-content {
+          text-align: center;
+          color: white;
+      }
+
+      /* Add hover effect */
+      .box:hover {
+          transform: scale(1.1);
+          box-shadow: 0px 5px 10px rgba(128, 128, 128, 0.2);
+      }
+
+      /* Add hover effect for other boxes */
+      .container2:hover .box:not(:hover) {
+          opacity: 0.7;
+      }
+      
+      /* Logo styles */
+      .logo {
+          width: 50px;
+          height: 50px;
+          margin-right: 10px;
+      }
+      
+      /* Button styles */
+      .button {
+    border: 1px solid #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 300px; /* Adjust this value as needed */
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #007bff;
+    color: #f8f6f6;
+}
+
+       /* CSS for the about us page */
+     
+
+       body {
+            margin: 0;
+            padding: 0;
+            font-family: "Orbitron", sans-serif;
+        }
+
+        .new-container {
+          margin-top: 100px;
+            display: flex;
+            height: 100vh;
+        }
+
+        .new-box1 {
+            flex: 1;
+            background-color: rgb(0, 0, 0);
+            padding: 0px;
+        }
+
+        .new-box2 {
+            flex: 1;
+            background-color: rgb(0, 0, 0);
+            display: flex;
+            width: 50%;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .new-description {
+            margin-top: 125px;
+            max-width: 800px;
+            color: white;
+            font-size: 25px;
+            line-height: 1.5;
+        }
+
+        .new-description p {
+            margin-left: 30px;
+            margin-bottom: 20px;
+        }
+
+        .new-imagelogored {
+            border-radius: 30px;
+            margin-left: 50px;
+            width: 800px; /* Set the width to 900px */
+            height: 800px; /* Set the height to 900px */
+        }
+
+        #see_more {
+            margin-top: 20px;
+            font-family: "Orbitron", sans-serif;
+            color: white;
+            font-size: 25px;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            display: block;
+        }
+
+        .new-shapes {
+            position: relative;
+            height: 100vh;
+            width: 100%;
+            background: #000000;
+            overflow: hidden;
+            border-radius: 20px;
+        }
+
+        .new-shape {
+            will-change: transform;
+            position: absolute;
+            border-radius: 50%;
+        }
+
+        .new-shape.shape-1 {
+            background: #290000;
+            width: 650px;
+            height: 650px;
+            margin: -325px 0 0 -325px;
+        }
+
+        .new-shape.shape-2 {
+            background: #ff1100;
+            width: 440px;
+            height: 440px;
+            margin: -220px 0 0 -220px;
+        }
+
+        .new-shape.shape-3 {
+            background: #ffb9b9;
+            width: 270px;
+            height: 270px;
+            margin: -135px 0 0 -135px;
+        }
+
+        .new-content {
+            top: 0;
+            left: 0;
+            margin-right: 150px;
+            margin-top: 1050px;
+            position: absolute;
+            align-items: center;
+            height: auto;
+            width: 900px;
+            background: #000000;
+            mix-blend-mode: screen;
+        }
+
+        p {
+            color: #ffffff;
+            margin-left: 100px;
+            margin-top: 100px;
+            text-align: left;
+            top: 0;
+            padding: 0;
+            width: 800px;
+            left: 0;
+            font-family: "Orbitron", sans-serif;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .new-cursor {
+            position: fixed;
+            background: #2128bd;
+            width: 20px;
+            height: 20px;
+            margin: -10px 0 0 -10px;
+            border-radius: 50%;
+            will-change: transform;
+            user-select: none;
+            pointer-events: none;
+            z-index: 10000;
+        }
+
+        ::selection {
+            color: #ffffff;
+            background: #2128bd;
+        }
+ /*------- product page -------*/
+ body{
+            background-color: rgb(0, 0, 0);
+        }
+      /* Apply styles to the container to center its contents */
+      .new-container1 {
+ 
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh; /* Makes the container take up the full viewport height */
+      }
+
+      /* Apply styles to the left and right boxes */
+      .new-box1 {
+        
+          width: 900px;
+          height: 900px;
+          margin: 5px;
+          background-color: #FF5733; /* Use the first shade of red */
+          border-radius: 20px;
+          box-shadow: 0px 5px 10px rgba(138, 138, 138, 0.2);
+      }
+
+      /* Apply styles to the right box */
+      .new-box1:nth-child(2) {
+          background-color: #FF0000; /* Use the second shade of red */
+      }
+
+      /* Center text within the boxes */
+      .new-box-content {
+        font-family: "Orbitron", sans-serif;
+          text-align: center;
+          padding: 20px;
+          color: white;
+      }
+      .fuel {
+        margin-top: 75px;
+        
+            background-color: #ff0000af;
+            width: 300px;
+            height: 50px;
+            border: 0;
+            border-radius: 5px;
+            transition: transform 0.2s ease-in-out; /* Add a smooth transition effect */
+        }
+
+        .fuel:hover {
+            transform: scale(1.05); /* Scale the button by 5% when hovered over */
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .fueltxt {
+            font-family: "Orbitron", sans-serif;
+            text-align: center;
+            margin-top: 10px;
+            font-weight: bolder;
+            padding: 0;
+            margin-left:-260px;
+            font-size: 20px;
+            color: white;
+            transition: transform 0.2s ease-in-out; /* Add a smooth transition effect */
+        }
+
+        .fuel:hover .fueltxt {
+            transform: scale(1.05); /* Scale the text by 5% when hovered over the button */
+        }
+        .products {
+            margin-top: 600px;
+            font-size: 30px;
+        }
+
+
+</style>
+ 
+</head>
+<body>
+
+<ul class="navbar0">
+ 
+    <li class="nav-item0"><a1 id="login-button0" href="Login.jsp">Login</a1></li>
+    <script>
+		
+		function redirectToPage() {
+    console.log("Button clicked"); // Add a log statement to check if the function is executed.
+    // Replace 'destination.html' with the URL of your login page.
+    window.location.href = 'Login.jsp';
+}
+
+		
+	</script>
+    
+    <li class="nav-item0"><a href="login.html">Q&A</a></li>
+    <li class="nav-item0"><a href="#contact-section" class="scroll-link">Contact</a></li>
+    <li class="nav-item0"><a href="#services-section" class="scroll-link">Services</a></li>
+    <li class="nav-item0"><a href="#about-us" class="scroll-link">About Us</a></li>
+    <li class="nav-item0"><a href="#carousel-section" class="scroll-link">Home</a></li>
+    <li class="nav-item0 logo"><a href="#"><img src="AUTOCARE HUB.png" alt="Logo"></a></li>
+    
+</ul>
+<div id="carousel-section" ></div>
+
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="height: 886px;">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      
+        <p class="sentense1">"Every bolt tightened is a note played in the grand symphony of automotive excellence." </p>
+       
+      
+      <img class="d-block w-100" src="web pageimg1.png" alt="First slide" style="height: 100svh;">
+    </div>
+    <div class="carousel-item">
+      <p class="sentense1">"We're not just mechanics; we're artisans, crafting the perfect mechanical symphony one turn at a time."</p>
+      
+      <img class="d-block w-100" src="web pageimg2.png" alt="Second slide" style="height: 100svh;">
+    </div>
+    <div class="carousel-item">
+      <p class="sentense1">"At our garage, we don't tighten bolts; we fine-tune the melody of your vehicle's performance."</p>
+      
+      <img class="d-block w-100" src="web pageimg3.png" alt="Third slide" style="height: 100svh;">
+      
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+</div>
+
+<div id="about-us" class="new-container">
+  <div class="new-box1">
+      <div class="new-cursor"></div>
+      <div class="new-shapes">
+          <div class="new-shape shape-1"></div>
+          <div class="new-shape shape-2"></div>
+          <div class="new-shape shape-3"></div>
+      </div>
+      <div class="new-content">
+          <p style="font-size: 25px;">
+              Elevating Your Vehicle Experience
+              <br>
+              At AutoCareHub, we're more than just a vehicle service and fuel management company – we're your driving force for excellence. Discover a world where cutting-edge technology meets top-tier service, where your vehicle's well-being takes center stage, and where your fuel needs are met with efficiency and reliability.
+              <br>
+              Join us on a journey where your vehicle is more than just transportation; it's a cherished companion. Explore our comprehensive vehicle services and innovative fuel solutions, all designed to enhance your automotive experience. With island-wide branches and a commitment to excellence, we're here to elevate your ride, wherever it may take you.
+              <br>
+              Experience the AutoCareHub difference today. Your journey begins here.
+          </p>
+          <a id="see_more" style="margin-left: 100px;" href="#home">See more...</a>
+      </div>
+  </div>
+  <div class="new-box2">
+      <img src="logored.png" class="new-imagelogored" alt="AutoCareHub Logo">
+  </div>
+</div>
+<script>
+  document.body.addEventListener("mousemove", (event) => {
+      const { clientX, clientY } = event;
+
+      gsap.set(".new-cursor", {
+          x: clientX,
+          y: clientY,
+      });
+
+      gsap.to(".new-shape", {
+          x: clientX,
+          y: clientY,
+          stagger: -0.1
+      });
+  });
+</script>
+
+    
+
+
+<div id="services-section">
+<div class="new-container1">
+  <div class="new-box1" style="background-image: url('fuelredirect.png');">
+      <div class="new-box-content">
+          <h2 class="products">Refueling Your Dreams - AutocareHub <br> We Keep You Moving.</h2>
+          <button class="fuel" onclick="redirectToPage()"><p class="fueltxt">Buy</p></button>
+
+<script>
+function redirectToPage() {
+// Replace 'destination.html' with the URL of the page you want to navigate to.
+window.location.href = 'home.html';
+}
+</script>
+      </div>
+  </div>
+  <div class="new-box1" href="#services" style="background-image: url('machanic.png');">
+      <div class="new-box-content">
+          <h2 class="products">Rev Up Your Ride at AutocareHub <br> Where Expertise Meets Excellence!</h2>
+          <button class="fuel" onclick="redirectToPage()"><p class="fueltxt">Buy</p></button>
+      </div>
+  </div>
+</div>
+</div>
+<div id="contact-section">
+<div class="container2">
+
+  <div class="box" style="background-image: url('twitter.png');">
+      <div class="box-content">
+          <a href="home.html"class="button" style="font-family: Orbitron, sans-serif";>home</a>
+          
+      </div>
+  </div>
+  <div class="box"style="background-image: url('twitter.png');">
+      <div class="box-content" >  
+          <a href="https://www.facebook.com/autocarehub" target="_blank" class="button" style="font-family: Orbitron, sans-serif";>Facebook</a>
+      </div>
+  </div>
+  <div class="box" style="background-image: url('instagram.png');">
+      <div class="box-content"> 
+          <a href="https://www.instagram.com/autocarehub" target="_blank" class="button" style="font-family: Orbitron, sans-serif";>Instagram</a> 
+      </div>
+  </div>
+  <div class="box" style="background-image: url('whatsp.png');">
+      <div class="box-content">
+      <a href="https://www.whatsapp.com/autocarehub" target="_blank" class="button" style="font-family: Orbitron, sans-serif";>Whatsapp</a>
+      </div>
+  </div>
+  <div class="box" style="background-image: url('twitter.png');">
+      <div class="box-content">
+          <a href="https://www.google.com/contact@autocarehub.com" target="_blank" class="button" style="font-family: Orbitron, sans-serif";>Email</a>
+      </div>
+  </div>
+</div>
+
+</div>
+
+
+
+</div>
+<script>
+  // Function to add a class that triggers the animation
+  function addAnimationClass() {
+      const boxes = document.querySelectorAll('.box');
+      boxes.forEach((box) => {
+          box.classList.add('animate');
+      });
+  }
+
+  // Wait for the page to load before triggering the animation
+  window.addEventListener('load', addAnimationClass);
+
+  // Smooth scrolling for the "Contact" link
+  document.addEventListener('DOMContentLoaded', function() {
+      var scrollLinks = document.querySelectorAll('.scroll-link');
+      scrollLinks.forEach(function(link) {
+          link.addEventListener('click', function(e) {
+              e.preventDefault();
+              var targetId = this.getAttribute('href').substring(1); // Get the target id without the #
+              var targetElement = document.getElementById(targetId);
+              if (targetElement) {
+                  window.scrollTo({
+                      top: targetElement.offsetTop,
+                      behavior: 'smooth'
+                  });
+              }
+          });
+      });
+  });
+</script>
+
+</body>
+</html>
